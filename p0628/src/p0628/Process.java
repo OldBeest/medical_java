@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import p0628.Card.Kind;
+
 public class Process {
 
 	HashMap read_con() {
@@ -13,8 +15,8 @@ public class Process {
 		list.add(new Students("유관순", 100, 100, 99));
 	
 		ArrayList list2 = new ArrayList();
-		list2.add(new Card(1, "SPADE"));
-		list2.add(new Card(2, "SPADE"));
+		list2.add(new Card(1, Kind.SPADE));
+		list2.add(new Card(2, Kind.SPADE));
 		
 		HashSet set = new HashSet();
 		set.add(new Person("이순신", 20));

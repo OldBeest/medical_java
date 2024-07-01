@@ -2,15 +2,15 @@ package p0628;
 
 public class Card {
 	
-//	enum Kind {SPADE, DIAMOND, HEART, CLOVER};
+	enum Kind {SPADE, DIAMOND, HEART, CLOVER};
 
 	private int number;
-	private String kind;
+	private Kind kind;
 	
 	Card(){
 		
 	}
-	Card(int number, String kind){
+	Card(int number, Kind kind){
 		this.number = number;
 		this.kind = kind;
 	}
@@ -18,14 +18,14 @@ public class Card {
 	public int get_number() {
 		return number;
 	}
-	public String get_kind() {
+	public Kind get_kind() {
 		return kind;
 	}
 	
 	public void set_number(int number) {
 		this.number = number;
 	}
-	public void set_number(String kind) {
+	public void set_number(Kind kind) {
 		this.kind = kind;
 	}
 	
