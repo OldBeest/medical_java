@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>cookie save</title>
+	</head>
+	<body>
+		<%
+			// 쿠키 생성
+			Cookie cookie1 = new Cookie("c_id", "aaa");
+			Cookie cookie2 = new Cookie("c_pw", "1111");
+			
+			//쿠키 시간 설정
+			cookie1.setMaxAge(60 * 10); // 60초 * 10번 = 10분 
+			cookie2.setMaxAge(60 * 5); // 60초 * 5번 = 5분 
+			
+			//로컬에 저장
+			response.addCookie(cookie1); // 로컬에 저장된 순간부터 설정한 시간이 시작됨
+			response.addCookie(cookie2);
+		%>
+		<h2>쿠키가 저장되었습니다.</h2>
+		<a href="cookieread.jsp">페이지 이동</a>
+	</body>
+</html>
